@@ -27,9 +27,7 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {
-	_valid = [[_house],"TON_fnc_preCheckHouse",false,false] call life_fnc_MP;
-	if(EQUAL(_valid,true)) then {
-		if(BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
+	if(BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
 		[[_uid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
 		_house SVAR ["house_owner",[_uid,profileName],true];
 		_house SVAR ["locked",true,true];
@@ -48,8 +46,5 @@ if(_action) then {
 		_numOfDoors = FETCH_CONFIG2(getNumber,CONFIG_VEHICLES,(typeOf _house),"numberOfDoors");
 		for "_i" from 1 to _numOfDoors do {
 			_house SVAR [format["bis_disabled_Door_%1",_i],1,true];
-		};
-	} else {
-		hint "Someone already own's this building.";
 	};
 };
