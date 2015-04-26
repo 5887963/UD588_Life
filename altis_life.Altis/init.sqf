@@ -6,3 +6,4 @@ life_versionInfo = "Altis Life RPG v4.0";
 [] execVM "KRON_Strings.sqf";
 
 StartProgress = true;
+[player] execVM "core\ud588\alt_fnc_ep.sqf";

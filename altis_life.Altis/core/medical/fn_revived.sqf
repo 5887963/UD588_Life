@@ -43,3 +43,4 @@ player SVAR ["Revive",nil,TRUE];
 player SVAR ["name",nil,TRUE];
 player SVAR ["Reviving",nil,TRUE];
 [] call life_fnc_hudUpdate; //Request update of hud.
+[player] execVM "core\ud588\alt_fnc_ep.sqf";
