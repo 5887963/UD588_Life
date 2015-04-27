@@ -8931,7 +8931,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=219;
+		items=218;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -10650,15 +10650,6 @@ class Mission
 			colorName="ColorRed";
 		};
 		class Item217
-		{
-			position[]={15606.681,18.559675,17218.074};
-			name="hospital_marker_1";
-			text="Hospital";
-			type="loc_Hospital";
-			colorName="ColorRed";
-			angle=-39.705616;
-		};
-		class Item218
 		{
 			position[]={15584.67,18.464546,17201.582};
 			name="med_car_1_1";
