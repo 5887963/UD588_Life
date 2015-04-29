@@ -2597,8 +2597,8 @@ class Mission
 				};
 				class Item41
 				{
-					position[]={3045.5417,2.026145,12612.363};
-					azimut=-118.53979;
+					position[]={3019.8325,0.012757822,12633.531};
+					azimut=-210.29784;
 					special="NONE";
 					id=138;
 					side="CIV";
@@ -4131,8 +4131,8 @@ class Mission
 		};
 		class Item61
 		{
-			position[]={3044.3811,2.0166333,12612.92};
-			azimut=-305.86401;
+			position[]={3020.3076,0.010041346,12632.749};
+			azimut=-397.62161;
 			id=275;
 			side="EMPTY";
 			vehicle="Land_CashDesk_F";
@@ -9370,11 +9370,12 @@ class Mission
 		};
 		class Item57
 		{
-			position[]={3041.5544,2.0197022,12612.536};
+			position[]={3020.7671,1.9549176,12629.925};
 			name="boat_2";
 			text="Boat Shop";
 			type="c_ship";
 			colorName="ColorWhite";
+			angle=-91.75779;
 		};
 		class Item58
 		{
