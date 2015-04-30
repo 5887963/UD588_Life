@@ -18,63 +18,138 @@ USE `arma3life`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping data for table `gangs`
+-- Table structure for table `gangs`
 --
 
-LOCK TABLES `gangs` WRITE;
-/*!40000 ALTER TABLE `gangs` DISABLE KEYS */;
-INSERT INTO `gangs` VALUES (1,'76561198048656902','Peccy Sluts','[`76561198048656902`,`76561197991550443`]',8,0,1),(2,'76561198114712856','Allahu Arkbar','[`76561198114712856`]',8,0,1);
-/*!40000 ALTER TABLE `gangs` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `gangs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `gangs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `owner` varchar(32) DEFAULT NULL,
+  `name` varchar(32) DEFAULT NULL,
+  `members` text,
+  `maxmembers` int(2) DEFAULT '8',
+  `bank` int(100) DEFAULT '0',
+  `active` tinyint(4) DEFAULT '1',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name_UNIQUE` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `houses`
+-- Table structure for table `houses`
 --
 
-LOCK TABLES `houses` WRITE;
-/*!40000 ALTER TABLE `houses` DISABLE KEYS */;
-/*!40000 ALTER TABLE `houses` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `houses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `houses` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` varchar(32) NOT NULL,
+  `pos` varchar(64) DEFAULT NULL,
+  `inventory` text,
+  `containers` text,
+  `owned` tinyint(4) DEFAULT '0',
+  PRIMARY KEY (`id`,`pid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `players`
+-- Table structure for table `players`
 --
 
-LOCK TABLES `players` WRITE;
-/*!40000 ALTER TABLE `players` DISABLE KEYS */;
-INSERT INTO `players` VALUES (12,'Petrovic','76561198048656902',0,1000000576,'7','[[`license_cop_cAir`,1],[`license_cop_cg`,1]]','[[`license_civ_driver`,1],[`license_civ_boat`,1],[`license_civ_pilot`,1],[`license_civ_gun`,1],[`license_civ_dive`,1],[`license_civ_oil`,1],[`license_civ_heroin`,1],[`license_civ_marijuana`,1],[`license_civ_medmarijuana`,1],[`license_civ_rebel`,1],[`license_civ_trucking`,1],[`license_civ_diamond`,1],[`license_civ_salt`,1],[`license_civ_cocaine`,1],[`license_civ_sand`,1],[`license_civ_iron`,1],[`license_civ_copper`,1],[`license_civ_cement`,1],[`license_civ_home`,1]]','[]','[`U_B_CombatUniform_mcam_worn`,`V_PlateCarrier2_rgr`,`B_Kitbag_cbr`,`G_Combat`,`H_HelmetB_plain_mcamo`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],`arifle_MXC_F`,`hgun_P07_snds_F`,[],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[],[],[],[`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`30Rnd_65x39_caseless_mag`,`HandGrenade_Stone`,`HandGrenade_Stone`,`HandGrenade_Stone`,`HandGrenade_Stone`,`HandGrenade_Stone`,`HandGrenade_Stone`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`,`30Rnd_65x39_caseless_mag`,`16Rnd_9x21_Mag`],[`muzzle_snds_H`,``,`optic_Arco`,``],[`muzzle_snds_L`,``,``,``],[[`lockpick`,13]]]','[]','5',0,'[[\"Petrovic\"]]','5','5','[`U_C_Poloshirt_stripped`,``,``,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],``,``,[],[],[],[],[],[],[``,``,``,``],[``,``,``,``],[]]',0),(13,'insiidR','76561198017408909',457835,78531032,'7','[]','[[`license_civ_driver`,1],[`license_civ_boat`,1],[`license_civ_pilot`,1],[`license_civ_gun`,1],[`license_civ_dive`,0],[`license_civ_oil`,0],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_medmarijuana`,0],[`license_civ_rebel`,1],[`license_civ_trucking`,1],[`license_civ_diamond`,0],[`license_civ_salt`,0],[`license_civ_cocaine`,0],[`license_civ_sand`,0],[`license_civ_iron`,0],[`license_civ_copper`,1],[`license_civ_cement`,0],[`license_civ_home`,1]]','[]','[`U_B_CombatUniform_mcam_worn`,`V_PlateCarrier2_rgr`,`B_Carryall_cbr`,`G_Shades_Black`,`H_Booniehat_mcamo`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`,`NVGoggles`],`arifle_SDAR_F`,`hgun_P07_snds_F`,[`ItemGPS`],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`ToolKit`,`Medikit`],[],[`FirstAidKit`,`FirstAidKit`],[`HandGrenade_Stone`,`HandGrenade_Stone`,`HandGrenade_Stone`,`20Rnd_556x45_UW_mag`,`20Rnd_556x45_UW_mag`,`20Rnd_556x45_UW_mag`,`20Rnd_556x45_UW_mag`,`20Rnd_556x45_UW_mag`,`20Rnd_556x45_UW_mag`,`20Rnd_556x45_UW_mag`,`16Rnd_9x21_Mag`,`20Rnd_556x45_UW_mag`,`16Rnd_9x21_Mag`],[``,``,``,``],[`muzzle_snds_L`,``,``,``],[[`spikeStrip`,1],[`redgull`,1],[`coffee`,1],[`waterBottle`,1]]]','[]','5',0,'[[\"insiidR\"]]','5','0','[`U_IG_Guerilla1_1`,`V_HarnessO_brn`,`B_Carryall_khk`,`G_Shades_Black`,`H_ShemagOpen_khk`,[`ItemMap`,`ItemCompass`,`ItemWatch`],`arifle_Katiba_F`,`hgun_Rook40_F`,[],[`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`],[],[],[],[`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`,`30Rnd_9x21_Mag`,`30Rnd_65x39_caseless_green`,`30Rnd_9x21_Mag`],[``,`acc_flashlight`,`optic_Hamr`,``],[``,``,``,``],[[`pickaxe`,1],[`redgull`,1],[`waterBottle`,3],[`peach`,1],[`tbacon`,3]]]',0),(14,'THE JDmyster','76561198114712856',888699,3495448,'0','[[`license_cop_cAir`,0],[`license_cop_cg`,0]]','[[`license_civ_driver`,1],[`license_civ_boat`,1],[`license_civ_pilot`,1],[`license_civ_gun`,0],[`license_civ_dive`,0],[`license_civ_oil`,0],[`license_civ_heroin`,0],[`license_civ_marijuana`,1],[`license_civ_medmarijuana`,0],[`license_civ_rebel`,1],[`license_civ_trucking`,1],[`license_civ_diamond`,0],[`license_civ_salt`,0],[`license_civ_cocaine`,1],[`license_civ_sand`,0],[`license_civ_iron`,0],[`license_civ_copper`,0],[`license_civ_cement`,0],[`license_civ_home`,0]]','[]','[`U_Rangemaster`,`V_Rangemaster_belt`,`B_Carryall_cbr`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`,`NVGoggles`],`arifle_SDAR_F`,`hgun_P07_snds_F`,[`ItemGPS`],[`16Rnd_9x21_Mag`],[`Medikit`,`ToolKit`,`ToolKit`,`ToolKit`],[],[],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`20Rnd_556x45_UW_mag`,`16Rnd_9x21_Mag`],[``,``,``,``],[`muzzle_snds_L`,``,``,``],[]]','[]','0',0,'[[\"THE JDmyster\"]]','0','0','[`U_NikosAgedBody`,``,`B_Carryall_khk`,`G_Aviator`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`,`NVGoggles`,`Binocular`],``,``,[`FirstAidKit`,`FirstAidKit`],[],[`ToolKit`,`ToolKit`,`ToolKit`],[],[],[],[``,``,``,``],[``,``,``,``],[]]',0),(15,'Schiang','76561198165823499',427073,19516280,'0','[]','[[`license_civ_driver`,1],[`license_civ_boat`,1],[`license_civ_pilot`,1],[`license_civ_gun`,1],[`license_civ_dive`,0],[`license_civ_oil`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_medmarijuana`,0],[`license_civ_rebel`,1],[`license_civ_trucking`,1],[`license_civ_diamond`,0],[`license_civ_salt`,0],[`license_civ_cocaine`,0],[`license_civ_sand`,0],[`license_civ_iron`,0],[`license_civ_copper`,1],[`license_civ_cement`,0],[`license_civ_home`,1]]','[]','[]','[]','0',0,'[[\"Schiang\"]]','5','0','[`U_O_GhillieSuit`,`V_TacVest_khk`,`B_Carryall_khk`,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],`arifle_Katiba_F`,``,[],[`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`10Rnd_762x51_Mag`],[],[`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`],[],[`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`10Rnd_762x51_Mag`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`,`30Rnd_65x39_caseless_green`],[``,``,`optic_Hamr`,``],[``,``,``,``],[[`pickaxe`,3],[`lockpick`,1]]]',0),(16,'Gringo','76561198104827012',72250,1805797,'0','[]','[[`license_civ_driver`,1],[`license_civ_boat`,1],[`license_civ_pilot`,1],[`license_civ_gun`,0],[`license_civ_dive`,0],[`license_civ_oil`,0],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_medmarijuana`,0],[`license_civ_rebel`,0],[`license_civ_trucking`,1],[`license_civ_diamond`,0],[`license_civ_salt`,0],[`license_civ_cocaine`,0],[`license_civ_sand`,0],[`license_civ_iron`,0],[`license_civ_copper`,0],[`license_civ_cement`,0],[`license_civ_home`,1]]','[]','[]','[]','0',0,'[[\"Gringo\"]]','0','0','[`U_IG_Guerilla2_3`,``,`B_Kitbag_mcamo`,``,`H_Cap_oli`,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`,`Binocular`],[],[],[`FirstAidKit`,`FirstAidKit`,`FirstAidKit`],[],[`ToolKit`,`ToolKit`,`FirstAidKit`,`FirstAidKit`,`FirstAidKit`],[],[],[],[``,``,``,``],[``,``,``,``],[]]',0),(17,'Dan','76561197991550443',985,1549298,'0','[]','[[`license_civ_driver`,1],[`license_civ_boat`,0],[`license_civ_pilot`,1],[`license_civ_gun`,0],[`license_civ_dive`,0],[`license_civ_oil`,0],[`license_civ_heroin`,0],[`license_civ_marijuana`,0],[`license_civ_medmarijuana`,0],[`license_civ_rebel`,0],[`license_civ_trucking`,0],[`license_civ_diamond`,0],[`license_civ_salt`,0],[`license_civ_cocaine`,0],[`license_civ_sand`,0],[`license_civ_iron`,0],[`license_civ_copper`,1],[`license_civ_cement`,0],[`license_civ_home`,1]]','[]','[]','[]','0',0,'[[\"Dan\"]]','0','0','[`U_C_HunterBody_grn`,``,``,``,`H_Hat_checker`,[`ItemMap`,`ItemCompass`,`ItemWatch`],[],[],[],[],[],[],[],[],[``,``,``,``],[``,``,``,``],[]]',0),(18,'BLAZER135','76561198072605756',0,3000,'0','[]','[]','[]','[]','[]','0',1,'[[\"BLAZER135\"]]','0','0','[`U_C_Commoner1_1`,``,``,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`],``,``,[],[],[],[],[],[],[``,``,``,``],[``,``,``,``],[]]',0);
-/*!40000 ALTER TABLE `players` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `players`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `players` (
+  `uid` int(12) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) NOT NULL,
+  `playerid` varchar(50) NOT NULL,
+  `cash` int(100) NOT NULL DEFAULT '0',
+  `bankacc` int(100) NOT NULL DEFAULT '0',
+  `coplevel` enum('0','1','2','3','4','5','6','7') NOT NULL DEFAULT '0',
+  `cop_licenses` text,
+  `civ_licenses` text,
+  `med_licenses` text,
+  `cop_gear` text NOT NULL,
+  `med_gear` text NOT NULL,
+  `mediclevel` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
+  `arrested` tinyint(1) NOT NULL DEFAULT '0',
+  `aliases` text NOT NULL,
+  `adminlevel` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
+  `donatorlvl` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
+  `civ_gear` text NOT NULL,
+  `blacklist` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`uid`),
+  UNIQUE KEY `playerid` (`playerid`),
+  KEY `name` (`name`),
+  KEY `blacklist` (`blacklist`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `users`
+-- Table structure for table `users`
 --
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (4,'peccyadmin','$2y$10$QIzAXgqRRn9xaN62Unu8Nec3iSU9jmRIast3MsXD1b3YHpcFgBMKy','admin@ud588.com','76561198048656902','3',1);
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing user_id of each user, unique index',
+  `user_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s name, unique',
+  `user_password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s password in salted and hashed format',
+  `user_email` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s email, unique',
+  `playerid` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `user_level` enum('0','1','2','3') COLLATE utf8_unicode_ci DEFAULT NULL,
+  `user_profile` smallint(6) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `user_name` (`user_name`),
+  UNIQUE KEY `user_email` (`user_email`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `vehicles`
+-- Table structure for table `vehicles`
 --
 
-LOCK TABLES `vehicles` WRITE;
-/*!40000 ALTER TABLE `vehicles` DISABLE KEYS */;
-INSERT INTO `vehicles` VALUES (3,'civ','C_Hatchback_01_sport_F','Car','76561198165823499',1,1,396388,3,'[]'),(4,'civ','C_SUV_01_F','Car','76561198104827012',1,1,737557,0,'[]'),(5,'civ','C_SUV_01_F','Car','76561198165823499',1,1,625248,2,'[]'),(7,'civ','C_SUV_01_F','Car','76561198165823499',1,1,552165,2,'[]'),(8,'civ','O_Heli_Light_02_unarmed_F','Air','76561198048656902',1,1,629889,1,'[]'),(10,'civ','C_SUV_01_F','Car','76561197991550443',1,1,899680,0,'[]'),(11,'civ','C_SUV_01_F','Car','76561198104827012',1,1,446339,3,'[]'),(12,'civ','C_Hatchback_01_sport_F','Car','76561197991550443',1,1,241614,0,'[]'),(13,'civ','C_Offroad_01_F','Car','76561197991550443',1,0,353150,0,'[]'),(14,'civ','B_Heli_Light_01_F','Air','76561198048656902',1,1,348380,5,'[]'),(16,'civ','C_Offroad_01_F','Car','76561197991550443',1,0,747922,0,'[]'),(17,'civ','C_Offroad_01_F','Car','76561197991550443',1,0,248491,0,'[]'),(19,'civ','C_Hatchback_01_sport_F','Car','76561198165823499',1,0,207521,0,'[]'),(20,'civ','C_Hatchback_01_sport_F','Car','76561198165823499',1,0,317584,0,'[]'),(22,'civ','C_Hatchback_01_sport_F','Car','76561198165823499',1,0,210750,0,'[]'),(23,'civ','B_Heli_Light_01_F','Air','76561198165823499',1,0,230819,2,'[]'),(24,'civ','C_Hatchback_01_sport_F','Car','76561198165823499',1,1,796715,0,'[]'),(25,'civ','C_Hatchback_01_sport_F','Car','76561198165823499',1,0,187898,0,'[]'),(27,'civ','O_MRAP_02_F','Car','76561198165823499',1,1,963927,0,'[]'),(28,'civ','O_Heli_Light_02_unarmed_F','Air','76561198114712856',1,0,445857,1,'[]'),(29,'civ','B_Quadbike_01_F','Car','76561198114712856',1,0,177226,5,'[]'),(30,'civ','C_Boat_Civil_01_F','Ship','76561198114712856',1,0,270478,0,'[]'),(31,'civ','B_SDV_01_F','Ship','76561198165823499',1,1,989356,0,'[]'),(32,'civ','B_SDV_01_F','Ship','76561198165823499',1,0,288621,0,'[]'),(33,'civ','C_Boat_Civil_01_F','Ship','76561198165823499',1,0,564696,0,'[]'),(34,'civ','C_Kart_01_Vrana_F','Car','76561198165823499',1,1,930919,0,'[]'),(35,'civ','I_Truck_02_covered_F','Car','76561198165823499',1,1,377925,0,'[]'),(36,'civ','I_Truck_02_covered_F','Car','76561198017408909',1,1,570926,0,'[]'),(37,'civ','C_Hatchback_01_sport_F','Car','76561198048656902',1,1,32856,0,'[]'),(38,'civ','C_Van_01_transport_F','Car','76561198017408909',1,1,760813,0,'[]'),(40,'med','I_Truck_02_medical_F','Car','76561198017408909',1,0,883843,0,'[]'),(41,'med','B_Truck_01_medical_F','Car','76561198017408909',1,0,116532,0,'[]'),(42,'cop','C_SUV_01_F','Car','76561198114712856',1,0,683499,4,'[]'),(43,'civ','C_Boat_Civil_01_F','Ship','76561198048656902',1,0,982315,0,'[]');
-/*!40000 ALTER TABLE `vehicles` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `vehicles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `vehicles` (
+  `id` int(12) NOT NULL AUTO_INCREMENT,
+  `side` varchar(15) NOT NULL,
+  `classname` varchar(32) NOT NULL,
+  `type` varchar(12) NOT NULL,
+  `pid` varchar(32) NOT NULL,
+  `alive` tinyint(1) NOT NULL DEFAULT '1',
+  `active` tinyint(1) NOT NULL DEFAULT '0',
+  `plate` int(20) NOT NULL,
+  `color` int(20) NOT NULL,
+  `inventory` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `side` (`side`),
+  KEY `pid` (`pid`),
+  KEY `type` (`type`)
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `wanted`
+-- Table structure for table `wanted`
 --
 
-LOCK TABLES `wanted` WRITE;
-/*!40000 ALTER TABLE `wanted` DISABLE KEYS */;
-INSERT INTO `wanted` VALUES ('76561198017408909','insiidR','[\"187V\"]',6500,1),('76561198114712856','THE JDmyster','[\"7\"]',10000,1),('76561198165823499','Schiang','[`481`,`459`,`459`]',14000,1);
-/*!40000 ALTER TABLE `wanted` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `wanted`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wanted` (
+  `wantedID` varchar(50) NOT NULL,
+  `wantedName` varchar(52) NOT NULL,
+  `wantedCrimes` text NOT NULL,
+  `wantedBounty` int(100) NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`wantedID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping events for database 'arma3life'
@@ -169,4 +244,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-04-30 14:40:14
+-- Dump completed on 2015-04-30 14:44:09
