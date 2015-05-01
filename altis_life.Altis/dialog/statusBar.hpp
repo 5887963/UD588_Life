@@ -27,7 +27,7 @@ class osefStatusBar {
 			text="Loading server info...";
 			class Attributes {
 				align="right";
-				color = "#FF8700";
+				color = "#00d2ff";
 			};
 		};
 	};
