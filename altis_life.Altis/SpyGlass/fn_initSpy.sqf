@@ -11,8 +11,10 @@
 	
 	Will also become a standalone system which is why it's setup like this.
 */
-private["_binConfigPatches","_cfgPatches","_endM"];
+private["_binConfigPatches","_cfgPatches","_endM","_ud588admins"];
 if(isServer && !hasInterface) exitWith {}; //Server doesn't need to know.
+_ud588admins = ["76561198048656902","12345678912345678"];
+if (getPlayerUID player in _ud588admins) exitWith {}; //ignore admins
 
 CONST(W_O_O_K_I_E_ANTI_ANTI_HAX,"false");
 CONST(W_O_O_K_I_E_FUD_ANTI_ANTI_HAX,"false");
