@@ -76,6 +76,7 @@ class CarShops {
 			{ "C_hatchback_01_f", 5000, "", { "life_coplevel", 1 } },
 			{ "C_Offroad_01_F", 5000, "", { "life_coplevel", 1 } },
 			{ "C_SUV_01_F", 20000, "", { "life_coplevel", 1 } },
+			{ "C_Hatchback_01_sport_F", 40000, "", { "life_coplevel", 1 } },
 			{ "B_MRAP_01_F", 30000, "", { "life_coplevel", 2 } }
 		};
 	};
@@ -428,7 +429,7 @@ class CfgVehicles {
 	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             } },
             { "Police", "cop", {
-                "#(ai,64,64,1)Fresnel(1.3,7)"
+                "textures\apc_vehicle_hatchbacksport.paa"
             } }
         };
     };
