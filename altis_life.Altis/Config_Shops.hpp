@@ -89,7 +89,7 @@ class WeaponShops {
         items[] = {
         	{ "arifle_sdar_F", "Taser Rifle", 20000 },
 			{ "hgun_P07_snds_F", "Stun Pistol", 2000 },
-			{ "hgun_P07_F", "", 7500 },
+			{ "hgun_P07_F", "Lethal Pistol", 7500 },
 			{ "HandGrenade_Stone", "Flashbang", 1700 },
 			{ "Binocular", "", 150 },
 			{ "ItemGPS", "", 100 },

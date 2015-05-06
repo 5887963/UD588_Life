@@ -26,6 +26,18 @@ if(side player == WEST) then {
 	if ((uniform player) == "U_B_CombatUniform_mcam" && FETCH_CONST(life_coplevel) > 4) then {
 		player setObjectTextureGlobal [0, "textures\apc_uniform_sgt.paa"];
 	};
+	// INSP
+	if ((uniform player) == "U_B_CombatUniform_mcam" && FETCH_CONST(life_coplevel) > 5) then {
+		player setObjectTextureGlobal [0, "textures\apc_uniform_insp.paa"];
+	};
+	// SUPT
+	if ((uniform player) == "U_B_CombatUniform_mcam" && FETCH_CONST(life_coplevel) > 7) then {
+		player setObjectTextureGlobal [0, "textures\apc_uniform_supt.paa"];
+	};
+	// COMM
+	if ((uniform player) == "U_B_CombatUniform_mcam" && FETCH_CONST(life_coplevel) > 9) then {
+		player setObjectTextureGlobal [0, "textures\apc_uniform_comm.paa"];
+	};
 	// invisible backpack
 	if ((backpack player) == "B_FieldPack_cbr" && (FETCH_CONST(life_coplevel) > 0)) then {
 		(unitbackpack player) setObjectTextureGlobal [0, ""];
