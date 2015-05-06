@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `arma3life` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `arma3life`;
 -- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
 --
 -- Host: localhost    Database: arma3life
@@ -68,7 +66,7 @@ CREATE TABLE `players` (
   `playerid` varchar(50) NOT NULL,
   `cash` int(100) NOT NULL DEFAULT '0',
   `bankacc` int(100) NOT NULL DEFAULT '0',
-  `coplevel` enum('0','1','2','3','4','5','6','7') NOT NULL DEFAULT '0',
+  `coplevel` enum('0','1','2','3','4','5','6','7','8','9','10') NOT NULL DEFAULT '0',
   `cop_licenses` text,
   `civ_licenses` text,
   `med_licenses` text,
@@ -81,11 +79,13 @@ CREATE TABLE `players` (
   `donatorlvl` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
   `civ_gear` text NOT NULL,
   `blacklist` tinyint(1) NOT NULL DEFAULT '0',
+  `westcash` int(100) NOT NULL DEFAULT '0',
+  `westbankacc` int(100) NOT NULL DEFAULT '0',
   PRIMARY KEY (`uid`),
   UNIQUE KEY `playerid` (`playerid`),
   KEY `name` (`name`),
   KEY `blacklist` (`blacklist`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -131,7 +131,7 @@ CREATE TABLE `vehicles` (
   KEY `side` (`side`),
   KEY `pid` (`pid`),
   KEY `type` (`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -244,4 +244,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-04-30 14:44:09
+-- Dump completed on 2015-05-06 11:09:38
