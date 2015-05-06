@@ -73,9 +73,10 @@ class CarShops {
 	class cop_car {
 		side = "cop";
 		vehicles[] = {
-			{ "C_Offroad_01_F", 5000, ""},
-			{ "C_SUV_01_F", 20000, "" },
-			{ "B_MRAP_01_F", 30000, "", { "life_coplevel", 3 } }
+			{ "C_hatchback_01_f", 5000, "", { "life_coplevel", 1 } },
+			{ "C_Offroad_01_F", 5000, "", { "life_coplevel", 1 } },
+			{ "C_SUV_01_F", 20000, "", { "life_coplevel", 1 } },
+			{ "B_MRAP_01_F", 30000, "", { "life_coplevel", 2 } }
 		};
 	};
 
@@ -531,6 +532,9 @@ class CfgVehicles {
             } },
             { "Black", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa"
+            } },
+            { "Police", "cop", {
+                "textures\apc_vehicle_hatchbacknormal.paa"
             } }
         };
     };
