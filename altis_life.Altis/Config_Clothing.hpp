@@ -98,7 +98,7 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_B_CombatUniform_mcam", "PCSO Uniform", 550, { "life_coplevel", "SCALAR", 1 } }
+			{ "U_B_CombatUniform_mcam", "Police Uniform", 550, { "life_coplevel", "SCALAR", 1 } }
 		};
 
 		headgear[] = {
@@ -127,12 +127,15 @@ class Clothing {
 
 		vests[] = {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
-			{ "V_TacVest_blk_POLICE", "", 800, { "", "", -1 } }
+			{ "V_BandollierB_blk", "Bandoillier", 800, { "life_coplevel", "SCALAR", 2 } },
+			{ "V_TacVest_blk_POLICE", "Bulletproof Vest", 800, { "life_coplevel", "SCALAR", 5 } },
+			{ "V_PlateCarrier1_blk", "Assault Rig", 800, { "life_coplevel", "SCALAR", 8 } },
+			{ "V_PlateCarrierSpec_blk", "High-Protection Armour", 800, { "life_coplevel", "SCALAR", 10 } },
 		};
 
 		backpacks[] = {
 			{ "NONE", "Remove Backpack", 0, { "", "", -1 } },
-			{ "B_FieldPack_cbr", "", 500, { "", "", -1 } }
+			{ "B_FieldPack_cbr", "Backpack", 500, { "", "", -1 } }
 		};
 	};
 
