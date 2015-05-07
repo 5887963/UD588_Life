@@ -8931,7 +8931,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=218;
+		items=216;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -10633,24 +10633,6 @@ class Mission
 			colorName="ColorRed";
 		};
 		class Item215
-		{
-			position[]={7757.6431,108.63041,19958.082};
-			name="hunting_zone";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorWhite";
-			a=1000;
-			b=1000;
-		};
-		class Item216
-		{
-			position[]={7604.667,128.90898,19991.012};
-			name="hunting_marker";
-			text="Hunting Grounds";
-			type="mil_join";
-			colorName="ColorRed";
-		};
-		class Item217
 		{
 			position[]={15584.67,18.464546,17201.582};
 			name="med_car_1_1";
