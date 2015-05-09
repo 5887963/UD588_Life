@@ -220,31 +220,31 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_C_Driver_1_black", "", 1500, { "", "", -1 } },
-			{ "U_C_Driver_1_blue", "", 1500, { "", "", -1 } },
-			{ "U_C_Driver_1_red", "", 1500, { "", "", -1 } },
-			{ "U_C_Driver_1_orange", "", 1500, { "", "", -1 } },
-			{ "U_C_Driver_1_green", "", 1500, { "", "", -1 } },
-			{ "U_C_Driver_1_white", "", 1500, { "", "", -1 } },
-			{ "U_C_Driver_1_yellow", "", 1500, { "", "", -1 } },
-			{ "U_C_Driver_2", "", 3500, { "", "", -1 } },
-			{ "U_C_Driver_1", "", 3600, { "", "", -1 } },
-			{ "U_C_Driver_3", "", 3700, { "", "", -1 } },
-			{ "U_C_Driver_4", "", 3700, { "", "", -1 } }
+			{ "U_C_Driver_1_black", "", 350, { "", "", -1 } },
+			{ "U_C_Driver_1_blue", "", 500, { "", "", -1 } },
+			{ "U_C_Driver_1_red", "", 340, { "", "", -1 } },
+			{ "U_C_Driver_1_orange", "", 550, { "", "", -1 } },
+			{ "U_C_Driver_1_green", "", 225, { "", "", -1 } },
+			{ "U_C_Driver_1_white", "", 350, { "", "", -1 } },
+			{ "U_C_Driver_1_yellow", "", 460, { "", "", -1 } },
+			{ "U_C_Driver_2", "", 700, { "", "", -1 } },
+			{ "U_C_Driver_1", "", 670, { "", "", -1 } },
+			{ "U_C_Driver_3", "", 800, { "", "", -1 } },
+			{ "U_C_Driver_4", "", 880, { "", "", -1 } }
 		};
 
 		headgear[] = {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_RacingHelmet_1_black_F", "", 1000, { "", "", -1 } },
-			{ "H_RacingHelmet_1_red_F", "", 1000, { "", "", -1 } },
-			{ "H_RacingHelmet_1_white_F", "", 1000, { "", "", -1 } },
-			{ "H_RacingHelmet_1_blue_F", "", 1000, { "", "", -1 } },
-			{ "H_RacingHelmet_1_yellow_F", "", 1000, { "", "", -1 } },
-			{ "H_RacingHelmet_1_green_F", "", 1000, { "", "", -1 } },
-			{ "H_RacingHelmet_1_F", "", 2500, { "", "", -1 } },
-			{ "H_RacingHelmet_2_F", "", 2500, { "", "", -1 } },
-			{ "H_RacingHelmet_3_F", "", 2500, { "", "", -1 } },
-			{ "H_RacingHelmet_4_F", "", 2500, { "", "", -1 } }
+			{ "H_RacingHelmet_1_black_F", "", 500, { "", "", -1 } },
+			{ "H_RacingHelmet_1_red_F", "", 500, { "", "", -1 } },
+			{ "H_RacingHelmet_1_white_F", "", 500, { "", "", -1 } },
+			{ "H_RacingHelmet_1_blue_F", "", 500, { "", "", -1 } },
+			{ "H_RacingHelmet_1_yellow_F", "", 500, { "", "", -1 } },
+			{ "H_RacingHelmet_1_green_F", "", 500, { "", "", -1 } },
+			{ "H_RacingHelmet_1_F", "", 750, { "", "", -1 } },
+			{ "H_RacingHelmet_2_F", "", 750, { "", "", -1 } },
+			{ "H_RacingHelmet_3_F", "", 750, { "", "", -1 } },
+			{ "H_RacingHelmet_4_F", "", 750, { "", "", -1 } }
 		};
 
 		goggles[] = {
