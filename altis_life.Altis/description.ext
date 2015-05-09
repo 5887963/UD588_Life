@@ -1,6 +1,6 @@
-author = "Tonic and Itsyuka";
-onLoadName = "Altis Life RPG v4.0";
-onLoadMission = "An RPG game mode developed by Tonic";
+author = "Tonic and Itsyuka; UD588 Development Team";
+onLoadName = "UD588 Life v0.1.0-1";
+onLoadMission = "An RPG game mode developed by Tonic; enhanced further by the UD588 Development Team";
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 5;
