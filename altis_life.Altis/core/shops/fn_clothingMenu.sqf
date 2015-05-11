@@ -206,4 +206,5 @@ if((life_clothing_purchase select 4) == -1) then {
 
 life_clothing_purchase = [-1,-1,-1,-1,-1];
 [] call life_fnc_Uniformscolor;
+[] call life_fnc_statusBar;
 [] call life_fnc_saveGear;

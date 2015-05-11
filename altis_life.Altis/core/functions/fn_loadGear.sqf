@@ -92,3 +92,4 @@ if(playerSide == independent && {EQUAL(uniform player,"U_Rangemaster")}) then {
 	[[player,0,"textures\medic_uniform.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;
 };
 [] call life_fnc_Uniformscolor;
+[] call life_fnc_statusBar;

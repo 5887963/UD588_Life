@@ -39,3 +39,4 @@ if(_container isKindOf "Man" && !alive _container) exitWith {
 	true;
 };
 [] call life_fnc_Uniformscolor;
+[] call life_fnc_statusBar;

@@ -24,3 +24,4 @@ switch(playerSide) do
 	};
 	case independent: {[] call life_fnc_Uniformscolor;};
 };
+[] call life_fnc_statusBar;

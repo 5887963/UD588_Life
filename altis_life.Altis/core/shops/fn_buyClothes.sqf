@@ -22,3 +22,4 @@ CASH = CASH - _price;
 life_clothesPurchased = true;
 closeDialog 0;
 [] call life_fnc_Uniformscolor;
+[] call life_fnc_statusBar;

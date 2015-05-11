@@ -74,3 +74,4 @@ if(life_removeWanted) then {
 [] call life_fnc_hudUpdate; //Request update of hud.
 [player] execVM "core\ud588\alt_fnc_ep.sqf";
 [] call life_fnc_Uniformscolor;
+[] call life_fnc_statusBar;

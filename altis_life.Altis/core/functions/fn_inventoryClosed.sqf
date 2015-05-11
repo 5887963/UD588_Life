@@ -24,3 +24,4 @@ if((typeOf _container) in ["Box_IND_Grenades_F","B_supplyCrate_F"]) exitWith {
 	[[_house],"TON_fnc_updateHouseContainers",false,false] call life_fnc_MP;
 };
 [] call life_fnc_Uniformscolor;
+[] call life_fnc_statusBar;

@@ -28,3 +28,4 @@ player assignItem "ItemGPS";
 
 [] call life_fnc_saveGear;
 [] call life_fnc_Uniformscolor;
+[] call life_fnc_statusBar;

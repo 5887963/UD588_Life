@@ -35,3 +35,4 @@ hint localize "STR_Session_SyncData";
 	life_session_time = false;
 };
 [] call life_fnc_Uniformscolor;
+[] call life_fnc_statusBar;
