@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `arma3life` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `arma3life`;
 -- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
 --
 -- Host: localhost    Database: arma3life
@@ -66,6 +68,8 @@ CREATE TABLE `players` (
   `playerid` varchar(50) NOT NULL,
   `cash` int(100) NOT NULL DEFAULT '0',
   `bankacc` int(100) NOT NULL DEFAULT '0',
+  `westcash` int(100) NOT NULL DEFAULT '0',
+  `westbankacc` int(100) NOT NULL DEFAULT '0',
   `coplevel` enum('0','1','2','3','4','5','6','7','8','9','10') NOT NULL DEFAULT '0',
   `cop_licenses` text,
   `civ_licenses` text,
@@ -79,34 +83,11 @@ CREATE TABLE `players` (
   `donatorlvl` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
   `civ_gear` text NOT NULL,
   `blacklist` tinyint(1) NOT NULL DEFAULT '0',
-  `westcash` int(100) NOT NULL DEFAULT '0',
-  `westbankacc` int(100) NOT NULL DEFAULT '0',
   PRIMARY KEY (`uid`),
   UNIQUE KEY `playerid` (`playerid`),
   KEY `name` (`name`),
   KEY `blacklist` (`blacklist`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `users` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing user_id of each user, unique index',
-  `user_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s name, unique',
-  `user_password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s password in salted and hashed format',
-  `user_email` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s email, unique',
-  `playerid` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `user_level` enum('0','1','2','3') COLLATE utf8_unicode_ci DEFAULT NULL,
-  `user_profile` smallint(6) NOT NULL,
-  PRIMARY KEY (`user_id`),
-  UNIQUE KEY `user_name` (`user_name`),
-  UNIQUE KEY `user_email` (`user_email`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data';
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -244,4 +225,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-06 11:09:38
+-- Dump completed on 2015-05-11 11:15:32
