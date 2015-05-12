@@ -23,13 +23,8 @@ switch(_mode) do {
 	case 1: {
 		_value = [_this,2,0,[0]] call BIS_fnc_param;
 		_value = [_value] call DB_fnc_numberSafe;
-		switch(_side)do 
-		{
-			case civilian: {_query = format["playerUpdateBank:%1:%2",_value,_uid];};
-			case west: {_query = format["playerWestUpdateBank:%1:%2",_value,_uid];};
-			case independent: {_query = format["playerUpdateBank:%1:%2",_value,_uid];};
-		};
-	}; 
+		_query = format["playerUpdateBank:%1:%2",_value,_uid];
+	};
 
 	case 2: {
 		_value = [_this,2,[],[[]]] call BIS_fnc_param;
@@ -72,12 +67,7 @@ switch(_mode) do {
 		_value2 = [_this,4,0,[0]] call BIS_fnc_param;
 		_value1 = [_value1] call DB_fnc_numberSafe;
 		_value2 = [_value2] call DB_fnc_numberSafe;
-		switch(_side)do 
-		{
-			case civilian: {_query = format["playerUpdateBank+Cash:%1:%2:%3",_value1,_value2,_uid];};
-			case west: {_query = format["playerWestUpdateBank+Cash:%1:%2:%3",_value1,_value2,_uid];};
-			case independent: {_query = format["playerUpdateBank+Cash:%1:%2:%3",_value1,_value2,_uid];};
-		};
+		_query = format["playerUpdateBank+Cash:%1:%2:%3",_value1,_value2,_uid];
 	};
 
 	case 7: {
